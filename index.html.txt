@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Quicksand', sans-serif;
+    background: linear-gradient(135deg,#ff9ecf,#ffd6e7);
+    overflow:hidden;
+}
+
+/* screens */
+.screen{
+    display:none;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+.active{ display:flex; }
+
+/* card */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    width:90%;
+    max-width:700px;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+    animation:pop 0.8s ease;
+}
+
+h1,h2,h3{
+    font-family:'Pacifico', cursive;
+    color:#e91e63;
+}
+
+p{ font-size:18px; color:#444; line-height:1.6; }
+
+img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:10px;
+}
+
+/* countdown */
+#countText{
+    font-size:120px;
+    color:#e91e63;
+}
+
+/* cake */
+.cake{
+    font-size:80px;
+    animation:bounce 1s infinite;
+}
+
+button{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#e91e63;
+    color:white;
+    margin:5px;
+    cursor:pointer;
+}
+
+/* hearts */
+.heart{
+    position:absolute;
+    animation:float 6s linear infinite;
+}
+
+/* balloons */
+.balloon{
+    position:absolute;
+    width:30px;
+    height:40px;
+    border-radius:50%;
+    animation:float 8s linear infinite;
+}
+
+/* fireworks */
+.firework{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:yellow;
+    animation:explode 1s ease-out forwards;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-120vh);}
+}
+
+@keyframes pop{ from{transform:scale(0);} to{transform:scale(1);} }
+@keyframes bounce{ 0%{transform:translateY(0);} 50%{transform:translateY(-10px);} 100%{transform:translateY(0);} }
+
+@keyframes explode{
+    0%{transform:scale(1);opacity:1;}
+    100%{transform:scale(20);opacity:0;}
+}
+
+/* buttons nav */
+.nav{
+    position:fixed;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ⏳ COUNTDOWN -->
+<div id="countdown" class="screen active">
+    <h1 id="countText">5</h1>
+</div>
+
+<!-- 🎂 CAKE SCREEN -->
+<div class="screen" id="cakeScreen">
+    <div class="card">
+        <div class="cake">🎂</div>
+        <h2>Cut the Cake ❤️</h2>
+        <button onclick="cutCake()">Cut Cake</button>
+    </div>
+</div>
+
+<!-- 💖 PAGE 1 -->
+<div class="screen page">
+    <div class="card">
+        <h1>Happy Birthday My Love ❤️</h1>
+        <p>Shona 💕 app meri life ka sab se khoobsurat hisa  ho.
+          ap main jan basti hai meri jaan ho ap ... meri jan ko dill se happy wala birthday love you mera bacha
+        </p>
+    </div>
+</div>
+
+<!-- 💕 PAGE 2 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Meri Sain 💖</h2>
+        <p>app meri duniya ka sukoon ho  ap meri jid ho  mera bacha dill krta hameha ap k sath rahoo baki jitni bh meri zindagi hai  ari umer ap k sath guzaroo   ap ko itni kushyaa doo k dukh ap k qareeb hi na ain kabhi dekhna hi na pary  meri jan love you or dil se happy birthdy mera shona, sain , mera bcha meri jan  , meri gurya , meri sweetheart , meri wifey❤️</p>
+    </div>
+</div>
+
+<!-- 🌸 PAGE 3 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Mera Bacha 🧸</h2>
+        <p>ap bina sab adhoora hai ap ap se baat nh hoti dill nh lagta mera bacha  apse har cheez share krny ka dl krta ha apse boht sari batein krny ko dill krta hi  apse apna pan mehsoos hota hai aap  meri jan ho  apse mera har din hai ap meri wiey ho mera bacha hamesha mery sath plz allah ham dono ko  hamesha sath rkhy ail doosry ka wafadar rakhy or himat de k hum apny is haram rishty ko halal main covert krein allah hamein aik doosry k sath hamesha khush rky har buri nazr se bachai ameen love you mera bacha , meri wifeeey , happy birthday meri jan💕</p>
+    </div>
+</div>
+
+<!-- 😔 PAGE 4 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Sorry meri jan😔</h2>
+        <p>Meri jan mainy hamesha apka dill dukhaya hi boh hurt bh kia  plz meri jan apny bachy ko apny hubby maaf krdena aj  meri ja ka specil din  plz aj k din k liye apny hubby ko maaf krdo or sab bhool jao plz meri jan apny bachy ko maaf krdena ❤️</p>
+    </div>
+</div>
+
+<!-- 🙏 PAGE 5 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Thank You ❤️</h2>
+        <p>Thank you meri jan  meri zindagi main any k liye ab kabhi muy chor k na jana plz bacha ap k bina adhoora hoo main   mera sath t qayamat tak dena meri jan  💕</p>
+    </div>
+</div>
+
+<!-- 👨‍💻 PAGE 6 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Programmer Love 💻</h2>
+        <pre>
+while(love){
+  care++;
+  kiss++;
+}
+        </pre>
+    </div>
+</div>
+
+<!-- 💖 PAGE 7 -->
+<div class="screen page">
+    <div class="card">
+        <h2>Forever Us ❤️</h2>
+        <p>Tum meri jaan ho 💕 Forever together  Happy birthday meri jan allah apko har wo kushi ata kre jo ap chahti har wo khuwaish poori kre jiska apko intzar hai  har dua qabool kre ap k rasty asan kre apo hamesha salamat rakhy or boht boh kamib kre  har burai se bachai itni kushya de k koi dukh ap k pass na ai  ap ko boht sari kushyan ata kre meri jan  ko dil se happy wala birthday meri jan mera shona mera bacha meri wifey cute si massom si churail ko again happy birthday allah apo mery sath hamesha kush rkhy ameeeeeeen happy birthdy bacha</p>
+    </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+    <button onclick="prevPage()">⬅ Prev</button>
+    <button onclick="nextPage()">Next ➡</button>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="music.mp3">
+</audio>
+
+<script>
+let pages = document.querySelectorAll(".page");
+let current = -1;
+
+/* countdown */
+let count = 5;
+let text = document.getElementById("countText");
+
+function startCountdown(){
+    let t = setInterval(()=>{
+        text.innerText = count;
+        count--;
+        if(count < 0){
+            clearInterval(t);
+            document.getElementById("countdown").classList.remove("active");
+            document.getElementById("cakeScreen").classList.add("active");
+        }
+    },1000);
+}
+
+/* cake cut */
+function cutCake(){
+    document.getElementById("cakeScreen").classList.remove("active");
+    showPage(0);
+    document.getElementById("music").play();
+    fireworks();
+    hearts();
+    balloons();
+}
+
+/* pages */
+function showPage(i){
+    pages.forEach(p=>p.classList.remove("active"));
+    pages[i].classList.add("active");
+    current = i;
+}
+
+function nextPage(){
+    if(current < pages.length-1) showPage(current+1);
+}
+
+function prevPage(){
+    if(current > 0) showPage(current-1);
+}
+
+/* hearts */
+function hearts(){
+    setInterval(()=>{
+        let h = document.createElement("div");
+        h.className="heart";
+        h.innerHTML="❤️";
+        h.style.left=Math.random()*100+"vw";
+        document.body.appendChild(h);
+        setTimeout(()=>h.remove(),6000);
+    },400);
+}
+
+/* balloons */
+function balloons(){
+    setInterval(()=>{
+        let b = document.createElement("div");
+        b.className="balloon";
+        b.style.left=Math.random()*100+"vw";
+        b.style.background=["#ff69b4","#ff4d6d","#ff85a2"][Math.floor(Math.random()*3)];
+        document.body.appendChild(b);
+        setTimeout(()=>b.remove(),8000);
+    },800);
+}
+
+/* fireworks */
+function fireworks(){
+    setInterval(()=>{
+        let f = document.createElement("div");
+        f.className="firework";
+        f.style.left=Math.random()*100+"vw";
+        f.style.top=Math.random()*100+"vh";
+        document.body.appendChild(f);
+        setTimeout(()=>f.remove(),1000);
+    },300);
+}
+
+/* start */
+window.onload = startCountdown;
+</script>
+
+</body>
+</html>
